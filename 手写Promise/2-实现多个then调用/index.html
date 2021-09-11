@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./promise.js"></script>
+  </head>
+  <body>
+    <script>
+      let p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject('eee')
+        }, 1000)
+      })
+      console.log(p)
+      p.then(
+        (res) => {
+          console.log(res)
+        },
+        (err) => {
+          console.log('this is err', err)
+          //   console.log()
+        }
+      )
+
+      p.then(
+        (res) => {
+          alert(res)
+        },
+        (err) => {
+          alert('this is err', err)
+          //   console.log()
+        }
+      )
+    </script>
+  </body>
+</html>
