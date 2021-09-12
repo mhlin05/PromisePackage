@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./promise.js"></script>
+  </head>
+  <body>
+    <script>
+      let p1 = new Promise((reslove, reject) => {
+        reslove('ok')
+        console.log(111)
+      })
+      p1.then((res) => {
+        console.log(222)
+      })
+      console.log(333)
+      // 输出为111 333 222 说明then的回调函数是异步执行的
+    </script>
+  </body>
+</html>
